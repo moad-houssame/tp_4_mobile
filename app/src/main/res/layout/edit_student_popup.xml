@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Image Section (centered like main activity) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/selected_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btn_select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Select Image"
+
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btn_delete_image"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Delete Image"
+
+                android:textColor="@android:color/white"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Form Fields (simplified like main activity) -->
+        <EditText
+            android:id="@+id/edit_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Nom"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Prénom"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            />
+
+        <!-- Date Selection (horizontal layout like main activity) -->
+
+        <!-- Save Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_date_naissance"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:hint="Date de naissance"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_pick_date"
+                android:layout_width="70dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:text="Pick"
+
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Enregistrer"
+
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
